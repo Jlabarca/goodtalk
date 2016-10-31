@@ -1,0 +1,7 @@
+<div class="box">
+    <div sticky-note note="note" class="alert alert-block sticky-note" ondelete="deleteNote(id)">
+        <button type="button" class="close" (click)="deleteNote(note.id)">&times;</button>
+        <input [(ngModel)]="note.name" type="text" class="title">
+        <textarea [(ngModel)]="note.content" class="body"></textarea>
+    </div>
+</div>

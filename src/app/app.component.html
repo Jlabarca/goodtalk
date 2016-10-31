@@ -1,0 +1,12 @@
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <a class="brand" href="#">AngularJS CollabBoard</a>
+        <button id="createButton" (click)="createNote()" class="btn btn-info pull-right">Create Note</button>
+    </div>
+</div>
+
+<div [ngGrid]="{'resizeable': false, 'margins': [5, 10]}">
+    <template ngFor let-note [ngForOf]="notes">
+        <note [note]= "note" [ngGridItem]="{sizex: 1, sizey: 1}"></note>
+    </template>
+</div>

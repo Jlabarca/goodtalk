@@ -1,0 +1,53 @@
+h1 {
+    background-color: orange;
+    padding: 0.5em 1em;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.grid {
+    background-color: #efefef;
+    width: 100%;
+    min-height: 750px;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    -webkit-transition: width 0.25s, height 0.25s, transform 0.5s;
+    -moz-transition: width 0.25s, height 0.25s, transform 0.5s;
+    -o-transition: width 0.25s, height 0.25s, transform 0.5s;
+    transition: width 0.25s, height 0.25s, transform 0.5s;
+    overflow: hidden;
+}
+
+.grid-item:active,
+.grid-item.moving {
+    z-index: 2;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.grid-placeholder {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+    .grid {
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px;
+    }
+    .grid-item {
+        position: static !important;
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    .grid-item:last-child {
+        margin-bottom: 0;
+    }
+}
