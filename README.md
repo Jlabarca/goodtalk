@@ -1,16 +1,12 @@
-# angular2-socketio-chat-example
+# goodTalk
 
-An example chat application made with Angular 2 and Socket.io (and NodeJS, ExpressJS and MongoDB).
+Open and real time collaborative bulletin board made with Angular 2, Nodejs, Socket.io and MongoDB.
 
 ## Highlights
 
 - Angular 2.0.0 final support (with `NgModule` -type of modules)
 - Webpack 2 & TypeScript 2
-- Styles with [SCSS](http://sass-lang.com/)
 - Webpack livereloading (on local development, not HMR but almost as good)
-- Full stack compilation on Heroku build process (this is really must to have, should also work on other systems)
-
-Note! This `angular2-socketio-chat-example` should be considered currently as *proof-of-concept*, as currently there's couple of hotfix packages used over the real ones, however, the changes have been already committed to upstream. Also Webpack 2 is currently on beta phase, as well as TypeScript 2 has a lot of pending issues still with types.
 
 ## Prequisities
 
@@ -18,7 +14,6 @@ The projects needs that you have the following things installed:
 
 - [NodeJS](https://nodejs.org/) (version 6 or greater, tested with 6.3.1)
 - [MongoDB](https://www.mongodb.com/) (tested with version 3.2.6)
-- [Heroku Toolbelt](https://toolbelt.heroku.com/) (latest)
 
 All of the prequisities are available on Linux, Windows and Mac OS X systems with their own installers (just go to links above and download package).
 
@@ -158,33 +153,5 @@ For local development, you can save the environment to `.env` -file on project r
 
 ```
 MONGODB_URI=mongodb://user:pass@hostname:port/database
-```
-
-## Heroku
-
-### Create a Heroku app first (if you don't have already one)
-
-```
-heroku create --region eu mycoolapp
-```
-
-### Add MongoDB
-
-You can use a free plan of [MongoLab](https://elements.heroku.com/addons/mongolab) for data storage:
-
-```
-heroku addons:create mongolab:sandbox
-```
-
-### Deploy
-
-```
-git push heroku master
-```
-
-### Open Heroku app in browser
-
-```
-heroku open
 ```
 
